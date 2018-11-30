@@ -1,0 +1,75 @@
+.mainpage {
+    max-width: 600px;
+    margin: auto;
+}
+
+.header {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 30px;
+}
+
+a {
+    margin-right: 10px
+}
+
+.navigation {
+    display: inline-block;
+    padding-left: 30px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.navigation input {
+    margin-left: 20px;
+    height: 15px;
+} 
+.navigation button {
+    background-color:royalblue; 
+    border-radius: 10px;   
+    margin-left: 20px;
+    height: 20px;
+}
+
+.container-1 {
+
+}
+.category-add {
+    padding-left: 10px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 30px;
+    height: 200px;
+    background-color: cornflowerblue;
+    width:inherit;
+}
+.category-table {
+    width: 550px;
+    margin-inline-start: 20px;
+    margin-top: 10px;
+}
+td input {
+    width: 200px;
+    height: 20px;
+}
+td select {
+    width: 100px;
+    height: 30px;
+    font: 1em sans-serif;
+}
+
+input [type="text"] {
+    border-radius: 15%;
+}
+table textarea {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
