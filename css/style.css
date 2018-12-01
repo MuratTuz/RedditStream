@@ -1,25 +1,23 @@
 .mainpage {
     max-width: 600px;
     margin: auto;
-}
-
-.header {
-    height: 150px;
     display: flex;
-    align-items: center;
-    padding-left: 30px;
+    flex-direction: column;
 }
 
-a {
-    margin-right: 10px
+.container-1 {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    height: 100px;
+    padding: 100px 20px 0px 20px;
 }
 
 .navigation {
-    display: inline-block;
-    padding-left: 30px;
-    width: 100%;
+    padding: 0px 20px 0px 20px;
+    flex-basis: 100%;
     position: relative;
-    box-sizing: border-box;
 }
 .navigation input {
     margin-left: 20px;
@@ -32,17 +30,58 @@ a {
     height: 20px;
 }
 
-.container-1 {
-
-}
 .category-add {
-    padding-left: 10px;
+    padding: 0px 20px 0px 20px;
     margin-top: 20px;
     border: 1px solid;
     border-radius: 30px;
     height: 200px;
     background-color: cornflowerblue;
-    width:inherit;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+a {
+    margin-right: 10px;
+}
+
+.row-1, .row-2, .row-3, .row-4 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.row-1 label {
+    flex-basis: 30%;
+}
+.row-1 div {
+    flex-basis: 20%;
+}
+.row-2 input {
+    flex-basis: 30%;
+    height: 20px;
+}
+.row-2 select {
+    flex-basis: 20%;
+    height: 30px;
+    font: 1em sans-serif;
+}
+.row-3 {
+    height: 30px;
+    align-items: flex-end;
+}
+.row-4 textarea {
+    flex-basis: 70%;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.row-4 button {
+    flex-basis: 20%;
+    border-radius: 10px;
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 .category-table {
     width: 550px;
@@ -50,29 +89,15 @@ a {
     margin-top: 10px;
     margin-bottom: 0px;
     padding-bottom: 0px;
-}
-td input {
-    width: 150px;
-    height: 20px;
-}
-td select {
-    width: 100%;
-    height: 30px;
-    font: 1em sans-serif;
+    align-items: flex-end;
+    box-sizing: border-box;
 }
 
-input [type="text"] {
-    border-radius: 15%;
+
+input[type="text"] {
+    border-radius: 5px;
 }
-table textarea {
-    max-width: 92%;
-    width: 92%;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-  }
+
 .new-post {
     width: 100px;
     height: 40px;
@@ -82,6 +107,7 @@ table textarea {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
+
 /*
 * {
     background: #000 !important;

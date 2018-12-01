@@ -16,61 +16,46 @@
 
 <body>
     <main class="mainpage">
-        <div class="header">
-            <h2>My Reddit Stream</h2>
-        </div>
         <div class="container-1">
+            <div class="header">
+                    <h2>My Reddit Stream</h2>       
+            </div>
             <nav class="navigation">
-                <a href="">Travel</a>
-                <a href="">Art</a>
-                <a href="">Movie</a>
-                <input type="text" />
-                <button>Add Topic</button>
+                    <a href="">Travel</a>
+                    <a href="">Art</a>
+                    <a href="">Movie</a>
+                    <input type="text" />
+                    <button>Add Topic</button>
             </nav>
             <div class="category-add">
-                <table class="category-table">
-                    <tr>
-                        <td width="45%">Title</td>
-                        <td width="35%">Image URL</td>
-                    </tr>
-                    <tr>
-                        <td width="45%">
-                            <input type="text" name="Title" id="title">
-                        </td>
-                        <td width="35%">
-                            <input type="text" name="ImageUrl" id="imageUrl">
-                        </td>
-                        <td width="20%" style="text-align:right">
-                            <select name="SelectionCategory" id="selectionCategory">
+                <div class="row-1">
+                    <label for="Title">Title</label>
+                    <label for="ImageUrl">Image URL</label>
+                    <div>&nbsp;</div>
+                </div>
+                <div class="row-2">
+                        <input type="text" name="Title" id="title">
+                        <input type="text" name="ImageUrl" id="imageUrl">
+                        <select name="SelectionCategory" id="selectionCategory">
                                 <option value="category">Category</option>
                                 <option value="travel">Travel</option>
                                 <option value="art">Art</option>
                                 <option value="movie">Movie</option>
                             </select>
-                        </td>
-                    </tr>         
-                    <tr>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>Message</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" height="100">
-                                <textarea rows="4"></textarea>
-                        </td>
-                        <td>
-                                <button class="new-post">New post</button>
-                            </td>
-
-                    </tr>
-
-                </table>
-
-
-
+                </div>
+                <div class="row-3">
+                        <label for="Message">Message</label>
+                </div>
+                <div class="row-4"> 
+                        <textarea rows="4"></textarea>
+                        <button class="new-post">New post</button>
+                </div>
             </div>
         </div>
+        
+        
+        
+
 
         <div class="container-2">
 
