@@ -1,15 +1,74 @@
 .mainpage {
-    max-width: 600px;
-    margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-.container-1 {
+.header {
+    flex-basis: 100%;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(173, 219, 206);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-left {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header-left * {
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.header-left input {
+    width: 100px;
+}
+.header-left button {
+    border-radius: 5px;
+    height: 30px;
+    background-color: rgb(180, 180, 84);
+}
+.header-right {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.header-right * {
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.content {
+    display: flex;
+}
+
+.left-center {
+    flex: 1;
+    order: 1;
+}
+
+.right-center {
+    flex: 1;
+    order: 3;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    order: 2;
+}
+
+.container-post-add {
     display: flex;
     flex-direction: column;
 }
-.header {
+.caption {
     height: 100px;
     padding: 100px 20px 0px 20px;
 }
@@ -24,19 +83,19 @@
     height: 15px;
 } 
 .navigation button {
-    background-color:royalblue; 
+    background-color:dodgerblue;; 
     border-radius: 10px;   
     margin-left: 20px;
     height: 20px;
 }
 
-.category-add {
+.new-post {
     padding: 10px 20px 0px 20px;
     margin-top: 20px;
     border: 1px solid;
     border-radius: 30px;
     height: 200px;
-    background-color: cornflowerblue;
+    background-color: rgb(179, 197, 231);
     display: flex;
     flex-direction: column;
     
@@ -49,6 +108,7 @@ a {
 .row-1, .row-2, .row-3, .row-4 {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     padding-top: 5px;
 }
 .row-1 label {
@@ -64,7 +124,8 @@ a {
 .row-2 select {
     flex-basis: 20%;
     height: 30px;
-    font: 1em sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 .row-3 {
     height: 30px;
@@ -73,39 +134,28 @@ a {
 .row-4 textarea {
     flex-basis: 70%;
     border-radius: 10px;
+    border: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 .row-4 button {
     flex-basis: 20%;
+    height: 40px;
     border-radius: 10px;
-    background-color: burlywood;
+    background-color: dodgerblue;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
-.category-table {
-    width: 550px;
-    margin-inline-start: 20px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    align-items: flex-end;
-    box-sizing: border-box;
-}
 
-
-input[type="text"] {
+input {
     border-radius: 5px;
 }
 
-.new-post {
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    align-self: flex-end;
-    background-color: burlywood;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+.container-post-show {
+    display: flex;
+    overflow-y: auto;
+    height: 800px;
+    background-color: rgb(163, 169, 179);
 }
 
 /*

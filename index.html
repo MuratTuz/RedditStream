@@ -16,70 +16,79 @@
 
 <body>
     <main class="mainpage">
-        <div class="container-1">
-            <div class="header">
-                    <h2>My Reddit Stream</h2>       
+        <div class="header">
+            <div class="header-left">
+                <label for="Username">Username</label> 
+                <input type="text" name="Username" id="username">
+                <label for="Password">Password</label> 
+                <input type="password" name="Password" id="pasword">
+                <button>New User</button>
             </div>
-            <nav class="navigation">
-                    <a href="">Travel</a>
-                    <a href="">Art</a>
-                    <a href="">Movie</a>
-                    <input type="text" />
-                    <button>Add Topic</button>
-            </nav>
-            <div class="category-add">
-                <div class="row-1">
-                    <label for="Title">Title</label>
-                    <label for="ImageUrl">Image URL</label>
-                    <div>&nbsp;</div>
-                </div>
-                <div class="row-2">
-                        <input type="text" name="Title" id="title">
-                        <input type="text" name="ImageUrl" id="imageUrl">
-                        <select name="SelectionCategory" id="selectionCategory">
+            <div class="header-right">
+                <select name="SelectionUser" id="SelectionUser">
+                    <option value="login">Login</option>
+                    <option value="murat">Murat</option>
+                    <option value="sukru">Sukru</option>
+                    <option value="rabia">Rabia</option>
+                    <option value="nurullah">Nurullah</option>
+                </select>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-center">
+                &nbsp;
+            </div>
+            <div class="right-center">
+                &nbsp;
+            </div>
+            <div class="center-content">
+                <div class="container-post-add">
+                    <div class="caption">
+                        <h2>My Reddit Stream</h2>
+                    </div>
+                    <nav class="navigation">
+                        <a href="">Travel</a>
+                        <a href="">Art</a>
+                        <a href="">Movie</a>
+                        <input type="text" />
+                        <button>Add Topic</button>
+                    </nav>
+                    <div class="new-post">
+                        <div class="row-1">
+                            <label for="Title">Title</label>
+                            <label for="ImageUrl">Image URL</label>
+                            <div>&nbsp;</div>
+                        </div>
+                        <div class="row-2">
+                            <input type="text" name="Title" id="title">
+                            <input type="text" name="ImageUrl" id="imageUrl">
+                            <select name="SelectionCategory" id="selectionCategory">
                                 <option value="category">Category</option>
                                 <option value="travel">Travel</option>
                                 <option value="art">Art</option>
                                 <option value="movie">Movie</option>
                             </select>
+                        </div>
+                        <div class="row-3">
+                            <label for="Message">Message</label>
+                        </div>
+                        <div class="row-4">
+                            <textarea rows="5"></textarea>
+                            <button>New Post</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="row-3">
-                        <label for="Message">Message</label>
+
+                <div class="container-post-show">
+
                 </div>
-                <div class="row-4"> 
-                        <textarea rows="5"></textarea>
-                        <button class="new-post">New post</button>
-                </div>
+
             </div>
         </div>
-        
-        
-        
 
 
-        <div class="container-2">
 
-        </div>
     </main>
 </body>
 
 </html>
-<!-- Buraya eski kod yerlestirildi
-<div class="catagory-add">
-        <p>
-            <span>Title</span>
-            <span class="span-position">Image URL</span>
-        </p>
-        <p>
-            <input type="text" name="Title" id="title">
-            <input type="text" name="ImageUrl" id="imageUrl">
-            <select name="SelectionCategory" id="selectionCategory">
-                <option value="travel">Travel</option>
-                <option value="art">Art</option>
-                <option value="movie">Movie</option>
-            </select>
-        </p>
-        
-
-    </div>
--->
