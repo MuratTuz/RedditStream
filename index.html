@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyRedditStream</title>
-
+    
     <link rel="stylesheet" href="css/style.css">
-
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-
+    crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -46,14 +46,14 @@
                     <div class="caption">
                         <h2>My Reddit Stream</h2>
                     </div>
-                    <nav class="navigation">
-                        <a href="">Travel</a>
-                        <a href="">Art</a>
-                        <a href="">Movie</a>
+                    <nav class="navigation" data-name="navigation">
+                        <i>Travel</i>
+                        <i>Art</i>
+                        <i>Movie</i>
                         <input type="text" />
                         <button>Add Topic</button>
                     </nav>
-                    <div class="new-post">
+                    <div class="post-add">
                         <div class="row-1">
                             <label for="Title">Title</label>
                             <label for="ImageUrl">Image URL</label>
@@ -78,16 +78,46 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="container-post-show" data-name="container-post-show">
+                    <div class="post-show" data-name="travel-1">
+                        <div class="post-show-votes">
+                            <img src="img/up.png" alt="up image" title="Like">
+                            <p>0</p>
+                            <img src="img/down.png" alt="down image" title="Dislike">
+                        </div>
+                        <div class="post-show-info">
+                            <p>Topic</p>
+                            <p>User</p>
+                            <p>Heading</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                Nullam cursus fermentum velit sed laoreet.
+                            </p>
+                            <div class="comment-add">
+                                <input type="text" name="comment-text" id="comment-text">
+                                <button>Comment</button>
+                            </div>
+                            <div class="comment-buttons">
+                                <button>Show Comment</button>
+                                <button>Hide Comment</button>
+                            </div>
+                            <div class="comment-show">
+                                <div class="comment-show-left-space">&nbsp;</div>
+                                <div class="comment-show-user-comments">
 
-                <div class="container-post-show">
-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                
             </div>
         </div>
-
-
-
+        
+        
+        
     </main>
 </body>
 
