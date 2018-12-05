@@ -182,8 +182,8 @@ input {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    justify-content: flex-start;
+    padding-top: 10%;
 }
 .post-show-votes * {
     display: block;
@@ -206,18 +206,29 @@ input {
 .post-show-info * {
     margin: 3px;
 }
-.post-show-info p {
+.post-show-info > p {
     margin-right: 20%;
     text-align: justify; 
+    display: block;
 }
-.post-show-info p:first-child {
+
+.post-show-info-heading {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+.post-show-info-heading-text p:first-child {
     color: blue;
 }
-.post-show-info p:nth-child(2) {
+.post-show-info-heading-text p:nth-child(2) {
     color: red;
 }
-.post-show-info p:nth-child(3) {
+.post-show-info-heading-text p:nth-child(3) {
     font: bold 24px Arial, Helvetica, sans-serif;
+}
+.post-show-info-heading-picture  img{
+    width: 90px;
+    height: 70px;
 }
 
 .comment-add {
@@ -247,16 +258,29 @@ input {
 .comment-show {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid;
+    border-top: 2px solid;
     border-color: gray;
 }
-.comment-show-left-space {
-    flex: 1;
-}
-.comment-show-user-comments {
-    flex: 3;
+.comment-show-user {
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
 }
 
+.comment-show-user-comments {
+    border-top: 2px solid;
+    border-color: gray;
+}
+.comment-show-user-comments:first-child {
+    border: none;
+}
+.comment-show-user-comments p:first-child {
+    font: bold 24px Arial, Helvetica, sans-serif;
+}
+.comment-show-user-comments p:last-child {
+    text-align: justify; 
+    display: block;
+}
 /*
 * {
     background: #000 !important;
