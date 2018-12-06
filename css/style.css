@@ -80,6 +80,7 @@
     cursor: pointer;
     font-style: normal;
     color: blue;
+    margin: 5px;
 }
 
 .post-add {

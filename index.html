@@ -38,11 +38,9 @@
                         <h1>My Reddit Stream</h1>
                     </div>
                     <nav class="navigation" data-name="navigation">
-                        <i>Travel</i>
-                        <i>Art</i>
-                        <i>Movie</i>
-                        <input type="text" />
-                        <button>Add Topic</button>
+                          <!--Here Topics come from localStorage-->
+                        <input type="text" id="add-topic-input"/>
+                        <button id="add-topic-button" value="Add Topic">Add Topic</button>
                     </nav>
                     <div class="post-add">
                         <div class="row-1">
@@ -54,10 +52,8 @@
                             <input type="text" name="Title" id="title">
                             <input type="text" name="ImageUrl" id="imageUrl">
                             <select name="SelectionCategory" id="selectionCategory">
-                                <option value="category">Category</option>
-                                <option value="travel">Travel</option>
-                                <option value="art">Art</option>
-                                <option value="movie">Movie</option>
+                                <option value="Category">Category</option>
+                                <!--Here Topics come from localStorage-->
                             </select>
                         </div>
                         <div class="row-3">
@@ -65,7 +61,7 @@
                         </div>
                         <div class="row-4">
                             <textarea rows="5"></textarea>
-                            <button>New Post</button>
+                            <button id="new-post-button" value="New Post">New Post</button>
                         </div>
                     </div>
                 </div>

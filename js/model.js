@@ -4,11 +4,13 @@
  * @param {*} user 
  * @param {*} password 
  */
-function userValidate(user, password) {
-    if (user.length == 0 || password.length == 0)
-        return false;
+function emptyValidate(...theArgs) {
 
-    return true;
+    let result = theArgs.find ( (element) => element.length === 0);
+    if (result == undefined)
+        return true;
+
+    return false;
 }
 
 /**
@@ -19,11 +21,32 @@ function userValidate(user, password) {
  * @param {*} password 
  */
 function addUser(user, password) {
-    let option = document.createElement('option');
-    option.value = user;
-    option.text = user;
 
-    $('#selection-user').append('<option value=${user}>${user}</option>');
+    $('#selection-user').append(`<option value=${user}>${user}</option>`);
 
-    saveUser(user, password);
+    saveAndGetUser(user, password);
+}
+
+function getReadyUser() {
+    let userArray = saveAndGetUser(null,null);
+
+        userArray.forEach(user => {
+            $('#selection-user').append(`<option value=${user}>${user}</option>`);
+        });
+}
+
+function addTopic(newTopic) {
+    $('.navigation').prepend (`<i>${newTopic}</i>`);
+    $('#selectionCategory').append(`<option value=${newTopic}>${newTopic}</option>`);
+
+    saveAndGetTopic(newTopic);
+}
+
+function getReadyTopic() {
+    let topicArray = saveAndGetTopic(null);
+
+        topicArray.forEach(newTopic => {
+            $('.navigation').prepend(`<i>${newTopic}</i>`);
+            $('#selectionCategory').append(`<option value=${newTopic}>${newTopic}</option>`);
+        });
 }
