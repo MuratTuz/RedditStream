@@ -21,16 +21,12 @@
                 <label for="Username">Username</label> 
                 <input type="text" name="Username" id="username">
                 <label for="Password">Password</label> 
-                <input type="password" name="Password" id="pasword">
-                <button>New User</button>
+                <input type="password" name="Password" id="password">
+                <button id="new-user-button">New User</button>
             </div>
             <div class="header-right">
-                <select name="SelectionUser" id="SelectionUser">
+                <select name="SelectionUser" id="selection-user">
                     <option value="login">Login</option>
-                    <option value="murat">Murat</option>
-                    <option value="sukru">Sukru</option>
-                    <option value="rabia">Rabia</option>
-                    <option value="nurullah">Nurullah</option>
                 </select>
             </div>
         </div>
@@ -718,6 +714,10 @@
             </div> 
         
     </main>
+
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/storage.js"></script>
 </body>
 
 </html>
