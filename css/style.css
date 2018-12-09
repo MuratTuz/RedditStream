@@ -186,11 +186,14 @@ input {
     justify-content: flex-start;
     padding-top: 10%;
 }
-.post-show-votes * {
+.post-show-votes *:not(.tooltippic) {
     display: block;
     width: 40px;
     height: 40px;
     margin: 0px auto;
+}
+.post-show-votes img:not(.tooltippic) {
+    cursor: pointer;
 }
 .post-show-votes p {
     box-align: center;
@@ -198,6 +201,24 @@ input {
     text-align: center;
 }
 
+.post-show-votes .tooltippic {
+    visibility: hidden;
+
+    background-color: none;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    margin-left:-130px;
+    z-index: 0;
+}
+
+.post-show-votes:hover .tooltippic {
+    visibility: visible;
+}
 .post-show-info {
     flex: 11;
     display: flex;

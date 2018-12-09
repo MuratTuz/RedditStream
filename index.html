@@ -31,689 +31,691 @@
             </div>
         </div>
         
-
-            <div class="content">
-                <div class="container-post-add">
-                    <div class="caption">
-                        <h1>My Reddit Stream</h1>
+        
+        <div class="content">
+            <div class="container-post-add">
+                <div class="caption">
+                    <h1>My Reddit Stream</h1>
+                </div>
+                <nav class="navigation" data-name="navigation">
+                    <!--Here Topics come from localStorage-->
+                    <input type="text" id="add-topic-input"/>
+                    <button id="add-topic-button" value="Add Topic">Add Topic</button>
+                </nav>
+                <div class="post-add">
+                    <div class="row-1">
+                        <label for="Title">Title</label>
+                        <label for="ImageUrl">Image URL</label>
                     </div>
-                    <nav class="navigation" data-name="navigation">
-                          <!--Here Topics come from localStorage-->
-                        <input type="text" id="add-topic-input"/>
-                        <button id="add-topic-button" value="Add Topic">Add Topic</button>
-                    </nav>
-                    <div class="post-add">
-                        <div class="row-1">
-                            <label for="Title">Title</label>
-                            <label for="ImageUrl">Image URL</label>
-                            <div>&nbsp;</div>
-                        </div>
-                        <div class="row-2">
-                            <input type="text" name="Title" id="title">
-                            <input type="text" name="ImageUrl" id="imageUrl">
-                            <select name="SelectionCategory" id="selectionCategory">
-                                <option value="Category">Category</option>
-                                <!--Here Topics come from localStorage-->
-                            </select>
-                        </div>
-                        <div class="row-3">
-                            <label for="Message">Message</label>
-                        </div>
-                        <div class="row-4">
-                            <textarea rows="5"></textarea>
-                            <button id="new-post-button" value="New Post">New Post</button>
-                        </div>
+                    <div class="row-2">
+                        <input type="text" name="Title" id="title">
+                        <input type="text" name="ImageUrl" id="imageUrl">
+                        <select name="SelectionCategory" id="selectionCategory">
+                            <option value="Category">Category</option>
+                            <!--Here Topics come from localStorage-->
+                        </select>
+                    </div>
+                    <div class="row-3">
+                        <label for="Message">Message</label>
+                    </div>
+                    <div class="row-4">
+                        <textarea rows="5" id="post-message"></textarea>
+                        <button id="new-post-button" value="New Post">New Post</button>
                     </div>
                 </div>
-                
-                <div class="container-post-show" data-name="container-post-show">
-                    <div class="content-wrapper">
-                        <div class="content-overflow">
+            </div>
+            
+            <div class="container-post-show" data-name="container-post-show">
+                <div class="content-wrapper">
+                    <div class="content-overflow">
+                        
+                        <div class="post-show" data-id="1">
+                            <div class="post-show-votes">
+                                <img class="tooltippic" src="img/like-dislike.jpeg" height="110" width="115">                             
+                                <img src="img/up.png" alt="up image" title="Like" id="img-up">
+                                <p id="votes-count">0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike" id="img-down">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" id="comment-add-input">
+                                    <button id="comment-add-button">Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button id="comment-show-button">Show Comment</button>
+                                    <button id="comment-hide-button">Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--Sample "Posts"-->
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="post-show" data-name="travel-1">
+                            <div class="post-show-votes">                            
+                                <img src="img/up.png" alt="up image" title="Like">
+                                <p>0</p>
+                                <img src="img/down.png" alt="down image" title="Dislike">                           
+                            </div>
+                            <div class="post-show-info">
+                                <div class="post-show-info-heading">
+                                    <div class="post-show-info-heading-text">
+                                        <p>Topic</p>
+                                        <p>User</p>
+                                        <p>Headingjjkkökkllkö</p>
+                                    </div>
+                                    <div class="post-show-info-heading-picture">
+                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum consequat scelerisque elit sit amet consequat. 
+                                    Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                    Nullam cursus fermentum velit sed laoreet.
+                                </p>
+                                <div class="comment-add">
+                                    <input type="text" >
+                                    <button>Comment</button>
+                                </div>
+                                <div class="comment-buttons">
+                                    <button>Show Comment</button>
+                                    <button>Hide Comment</button>
+                                </div>
+                                <div class="comment-show">
+                                    <div class="comment-show-user">
+                                        <div class="comment-show-user-comments">
+                                            <p>Sukru</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                        <div class="comment-show-user-comments">
+                                            <p>Nurullah</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Vestibulum consequat scelerisque elit sit amet consequat. 
+                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
+                                                Nullam cursus fermentum velit sed laoreet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
                     
-                            <div class="post-show" data-name="travel-1">
-                        <div class="post-show-votes">                            
-                            <img src="img/up.png" alt="up image" title="Like">
-                            <p>0</p>
-                            <img src="img/down.png" alt="down image" title="Dislike">                           
-                        </div>
-                        <div class="post-show-info">
-                            <div class="post-show-info-heading">
-                            <div class="post-show-info-heading-text">
-                                    <p>Topic</p>
-                                    <p>User</p>
-                                    <p>Headingjjkkökkllkö</p>
-                            </div>
-                            <div class="post-show-info-heading-picture">
-                                <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                            </div>
-                        </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Vestibulum consequat scelerisque elit sit amet consequat. 
-                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                Nullam cursus fermentum velit sed laoreet.
-                            </p>
-                            <div class="comment-add">
-                                <input type="text" >
-                                <button>Comment</button>
-                            </div>
-                            <div class="comment-buttons">
-                                <button>Show Comment</button>
-                                <button>Hide Comment</button>
-                            </div>
-                            <div class="comment-show">
-                                <div class="comment-show-user">
-                                <div class="comment-show-user-comments">
-                                        <p>Sukru</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                Nullam cursus fermentum velit sed laoreet.
-                                            </p>
-                                </div>
-                                <div class="comment-show-user-comments">
-                                        <p>Nurullah</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                Nullam cursus fermentum velit sed laoreet.
-                                            </p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                             </div>
-
-                            <!--Sample "Posts"-->
-                             <div class="post-show" data-name="travel-1">
-                                    <div class="post-show-votes">                            
-                                        <img src="img/up.png" alt="up image" title="Like">
-                                        <p>0</p>
-                                        <img src="img/down.png" alt="down image" title="Dislike">                           
-                                    </div>
-                                    <div class="post-show-info">
-                                        <div class="post-show-info-heading">
-                                        <div class="post-show-info-heading-text">
-                                                <p>Topic</p>
-                                                <p>User</p>
-                                                <p>Headingjjkkökkllkö</p>
-                                        </div>
-                                        <div class="post-show-info-heading-picture">
-                                            <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                        </div>
-                                    </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Vestibulum consequat scelerisque elit sit amet consequat. 
-                                            Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                            Nullam cursus fermentum velit sed laoreet.
-                                        </p>
-                                        <div class="comment-add">
-                                            <input type="text" >
-                                            <button>Comment</button>
-                                        </div>
-                                        <div class="comment-buttons">
-                                            <button>Show Comment</button>
-                                            <button>Hide Comment</button>
-                                        </div>
-                                        <div class="comment-show">
-                                            <div class="comment-show-user">
-                                            <div class="comment-show-user-comments">
-                                                    <p>Sukru</p>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                            Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                            Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                            Nullam cursus fermentum velit sed laoreet.
-                                                        </p>
-                                            </div>
-                                            <div class="comment-show-user-comments">
-                                                    <p>Nurullah</p>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                            Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                            Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                            Nullam cursus fermentum velit sed laoreet.
-                                                        </p>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                         </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>                            
-                            <div class="post-show" data-name="travel-1">
-                                <div class="post-show-votes">                            
-                                    <img src="img/up.png" alt="up image" title="Like">
-                                    <p>0</p>
-                                    <img src="img/down.png" alt="down image" title="Dislike">                           
-                                </div>
-                                <div class="post-show-info">
-                                    <div class="post-show-info-heading">
-                                    <div class="post-show-info-heading-text">
-                                            <p>Topic</p>
-                                            <p>User</p>
-                                            <p>Headingjjkkökkllkö</p>
-                                    </div>
-                                    <div class="post-show-info-heading-picture">
-                                        <img src="img/Screenshot 2018-11-29 at 20.00.23.png" alt="Topic Picture">
-                                    </div>
-                                </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                        Nullam cursus fermentum velit sed laoreet.
-                                    </p>
-                                    <div class="comment-add">
-                                        <input type="text" >
-                                        <button>Comment</button>
-                                    </div>
-                                    <div class="comment-buttons">
-                                        <button>Show Comment</button>
-                                        <button>Hide Comment</button>
-                                    </div>
-                                    <div class="comment-show">
-                                        <div class="comment-show-user">
-                                        <div class="comment-show-user-comments">
-                                                <p>Sukru</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                        <div class="comment-show-user-comments">
-                                                <p>Nurullah</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                                        Vestibulum consequat scelerisque elit sit amet consequat. 
-                                                        Aliquam erat volutpat. Aliquam venenatis gravida nisl sit amet facilisis. 
-                                                        Nullam cursus fermentum velit sed laoreet.
-                                                    </p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                        </div>
-
-
-
-                        </div>
-
-                    </div>
-
                 </div>
-
-
                 
-            </div> 
+            </div>
+            
+            
+            
+        </div> 
         
     </main>
-
+    
     <script src="js/model.js"></script>
     <script src="js/controller.js"></script>
     <script src="js/storage.js"></script>
+    <script src="js/initializer.js"></script>
+    <script src="js/CreatePost.js"></script>
 </body>
 
 </html>
