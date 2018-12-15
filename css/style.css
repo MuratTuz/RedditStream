@@ -24,7 +24,7 @@
     font-size: 14px;
 }
 .header-left input {
-    width: 100px;
+    width: 25%;
 }
 .header-left button {
     border-radius: 5px;
@@ -212,11 +212,12 @@ input {
 
     /* Position the tooltip */
     position: absolute;
-    margin-left:-130px;
-    z-index: 0;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
 }
 
-.post-show-votes:hover .tooltippic {
+.post-show-votes img:hover + .tooltippic {
     visibility: visible;
 }
 .post-show-info {
@@ -303,6 +304,7 @@ input {
     text-align: justify; 
     display: block;
 }
+
 /*
 * {
     background: #000 !important;

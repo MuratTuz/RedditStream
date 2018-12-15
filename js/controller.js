@@ -5,11 +5,17 @@
 $(function(){
 
     /**
- * Eventlistener for New User button on the header of index.html
- * This function ensures username and password info correctly 
- * to be entered. However it adds the info to the localStorage and
- * SelectionUser button on the header in the index.html
- */
+     * Initialiser funtions
+     */
+    getReadyTopic();
+
+    getReadyUser();
+
+    getReadyPost(null);
+
+    /**
+     * Eventlistener funtions
+     */
     $('#new-user-button').on('click', () => {
         let user = $('#username').val();
         let password = $('#password').val();
@@ -26,7 +32,7 @@ $(function(){
         $('#password').val("") 
     });
 
-
+    
     $('#add-topic-button').on('click', () => {
         let newTopic = $('#add-topic-input').val();
 
@@ -43,6 +49,13 @@ $(function(){
 
     });
 
+    $('.navigation').on('click', 'i', function(){
+        // <i data-id>
+        let index = $(event.target).data('id');
+        renderPosts(index);
+
+    });
+
     $('#new-post-button').on('click', () => {
         let user = $('#selection-user').val();
         let topic = $('#selectionCategory').val();
@@ -51,7 +64,7 @@ $(function(){
         let message = $('#post-message').val();
 
         let postValidation = emptyValidate(user, topic, title, image, message);
-        if (postValidation) {
+        if (postValidation && loginCheck(user) && topicCheck(topic)) {
             let newPost = new CreatePost(user, topic, title, image, message);
             addNewPost(newPost);
             
@@ -62,48 +75,46 @@ $(function(){
         }
         else {
             alert('Please enter all fields for a New Post');
+        }        
+    });
+
+    // votes up (like-dislike) and increases the like number
+    $('.content-overflow').on('click', '.img-up',  function() {
+        let user = $('#selection-user').val();
+        if (loginCheck(user)) {
+            let postID = $(event.target).closest("div[data-id]").data('id');
+            upVote(postID, user);
         }
-         
     });
 
-    $('.content-overflow').on('click', '#img-up',  function() {
+    // votes down (like-dislike) and increases the dislike number
+    $('.content-overflow').on('click', '.img-down',  function() {
         let user = $('#selection-user').val();
-        let x = event.target;
-        // get vote count and parse into number for incereasing
-        let votesString = $(event.target).next('#votes-count').text();
-        let votes = parseInt(votesString, 10);
+        if (loginCheck(user)) {
+            let postID = $(event.target).closest("div[data-id]").data('id');
+            downVote(postID, user);
+        }
+    });
 
+    // adds comment
+   $('.content-overflow').on('click', '.comment-add-button', function() {
+        let user = $('#selection-user').val();
+        if (loginCheck(user)) {
+            let comment = $(event.target).prev('.comment-add-input').val();
+            let postID = $(event.target).closest("div[data-id]").data('id');
+            pushComment(postID, user, comment);
+        }
+    });
+
+    // shows user comments
+    $('.content-overflow').on('click', '.comment-show-button', function() {
         let postID = $(event.target).closest("div[data-id]").data('id');
-        upVote(postID, user, votes);
-
-        /*
-        function hide(e){
-            // e.target refers to the clicked <li> element
-            // This is different than e.currentTarget which would refer to the parent <ul> in this context
-            e.target.style.visibility = 'hidden';
-          }
-          
-          // Attach the listener to the list
-          // It will fire when each <li> is clicked
-          ul.addEventListener('click', hide, false);
-          */
+        $(`div[data-id=${postID.toString()}] .comment-show-user`).css('display', 'flex');
     });
 
-    $('.content-overflow').on('click', '#img-down',  function() {
-        let user = $('#selection-user').val();
-        // get vote count and parse into number for incereasing
-        let votesString = $(this).prev('#votes-count').val();
-        let votes = parseInt(votesString, 10);
-
-        let postID = $(this).closest("div[data-id]").data('id');
-        downVote(postID, user, votes);
-    });
-
-    $('#comment-add-button').on('click', () => {
-        let user = $('#selection-user').val();
-        let comment = $('#comment-add-input').val();
-        let postID = $(this).closest("div[data-id]").data('id');
-
-        pushComment(postID, user, comment);
+    // hides user comments and collapses the comment container <div>
+    $('.content-overflow').on('click', '.comment-hide-button', function() {
+        let postID = $(event.target).closest("div[data-id]").data('id');
+        $(`div[data-id=${postID.toString()}] .comment-show-user`).css('display', 'none')
     });
 });
